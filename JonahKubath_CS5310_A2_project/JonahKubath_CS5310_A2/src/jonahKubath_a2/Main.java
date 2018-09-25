@@ -10,15 +10,15 @@ public class Main {
 		int numberOfRuns = 5; // Run xTimes to calculate an average
 		int printLength = 10;
 		int randomNumbCeiling = 100; // Generate random numbers from 0 - 99
-		long time[] = new long[4]; // 0 = quicksort, 1 = mergesort, 2 = selection
+		long time[] = new long[4]; // 0 = quicksort, 1 = rQuicksort, 2 = mergesort, 3 = insertion
 		long start, end = 0; // Variables for run time
 		boolean firstRun = true; // Only print once and for the length of 10 numbers
 		boolean verify = true; // Verify the sort algorithms with known methods
-		int testOffset = 1000;
+		int testOffset = 10;
 		int numberOfTests = 10 * testOffset;
 
 		
-		for(int j = 1000; j <= numberOfTests; j += testOffset) {
+		for(int j = 10; j <= numberOfTests; j += testOffset) {
 			/* Generate the original array */
 			int data[] = new int[j];
 			Random rand = new Random();
@@ -86,7 +86,7 @@ public class Main {
 					verifyArray(sorted, temp, "rQuicksort");
 				}
 				
-				/* Mergesort */
+				/* rQuickSort */
 				temp = copyArray(data, temp);
 				if(firstRun && temp.length == printLength) {
 					System.out.println("Mergesort");
@@ -102,6 +102,27 @@ public class Main {
 					System.out.print("New - ");
 					printArray(temp);
 				}
+				
+				if(verify) {
+					verifyArray(sorted, temp, "rQuicksort");
+				}
+				
+//				/* Mergesort */
+//				temp = copyArray(data, temp);
+//				if(firstRun && temp.length == printLength) {
+//					System.out.println("Mergesort");
+//					System.out.print("Old - ");
+//					printArray(temp);
+//				}
+//				start = end = 0; // Set time back to 0
+//				start = System.nanoTime();
+//				Sort.mergeSort(temp, 0, temp.length - 1);
+//				end = System.nanoTime();
+//				time[2] += (end - start);
+//				if(firstRun && temp.length == printLength) {
+//					System.out.print("New - ");
+//					printArray(temp);
+//				}
 				
 				if(verify) {
 					verifyArray(sorted, temp, "Mergesort");
