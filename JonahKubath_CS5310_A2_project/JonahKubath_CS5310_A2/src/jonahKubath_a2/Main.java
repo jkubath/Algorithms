@@ -15,10 +15,11 @@ public class Main {
 		boolean firstRun = true; // Only print once and for the length of 10 numbers
 		boolean verify = true; // Verify the sort algorithms with known methods
 		int testOffset = 10;
-		int numberOfTests = 10 * testOffset;
+		int startValue = 10;
+		int endValue = startValue + 10 * testOffset;
 
 		
-		for(int j = 10; j <= numberOfTests; j += testOffset) {
+		for(int j = 10; j <= endValue; j += testOffset) {
 			/* Generate the original array */
 			int data[] = new int[j];
 			Random rand = new Random();
