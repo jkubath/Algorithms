@@ -1,0 +1,79 @@
+Quicksort
+Old - 32 71 52 83 66 26 64 78 59 2 
+New - 2 26 32 52 59 64 66 71 78 83 
+rQuickSort
+Old - 32 71 52 83 66 26 64 78 59 2 
+New - 2 26 32 52 59 64 66 71 78 83 
+Mergesort
+Old - 32 71 52 83 66 26 64 78 59 2 
+New - 2 26 32 52 59 64 66 71 78 83 
+Insertion sort
+Old - 32 71 52 83 66 26 64 78 59 2 
+New - 2 26 32 52 59 64 66 71 78 83 
+
+--------- 10 ---------
+Quicksort - 90 ms
+rQuickSort - 11 ms
+Mergesort - 3 ms
+Insertion - 1 ms
+
+--------- 20 ---------
+Quicksort - 3 ms
+rQuickSort - 20 ms
+Mergesort - 10 ms
+Insertion - 238 ms
+
+--------- 30 ---------
+Quicksort - 9 ms
+rQuickSort - 31 ms
+Mergesort - 20 ms
+Insertion - 5 ms
+
+--------- 40 ---------
+Quicksort - 8 ms
+rQuickSort - 32 ms
+Mergesort - 14 ms
+Insertion - 7 ms
+
+--------- 50 ---------
+Quicksort - 12 ms
+rQuickSort - 21 ms
+Mergesort - 7 ms
+Insertion - 14 ms
+
+--------- 60 ---------
+Quicksort - 3 ms
+rQuickSort - 12 ms
+Mergesort - 7 ms
+Insertion - 11 ms
+
+--------- 70 ---------
+Quicksort - 2 ms
+rQuickSort - 17 ms
+Mergesort - 10 ms
+Insertion - 25 ms
+
+--------- 80 ---------
+Quicksort - 3 ms
+rQuickSort - 14 ms
+Mergesort - 12 ms
+Insertion - 62 ms
+
+--------- 90 ---------
+Quicksort - 3 ms
+rQuickSort - 34 ms
+Mergesort - 14 ms
+Insertion - 29 ms
+
+--------- 100 ---------
+Quicksort - 3 ms
+rQuickSort - 11 ms
+Mergesort - 16 ms
+Insertion - 36 ms
+
+--------- 110 ---------
+Quicksort - 4 ms
+rQuickSort - 12 ms
+Mergesort - 19 ms
+Insertion - 40 ms
+

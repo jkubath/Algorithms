@@ -6,7 +6,16 @@ public class Sort {
 	/*
 	 * Quicksort algorithm taken from: Computer Algorithms (Course Book)
 	 * rQuicksort algorithm taken from: Computer Algorithms (Course Book)
-	 * MergeSort algorithm taken from: https://www.buildingjavaprograms.com/code-files/4ed/ch13/MergeSort.java
+	 * MergeSort algorithm taken from: Computer Algorithms (Course Book)
+	*/
+	/**
+	 * QuickSort algorithm is done by splitting the array and sorting values in place.
+	 * The partition index is the value in the first position of the range to be sorted.
+	 * Big-Oh(n log(n) )
+	 * @param array The data to sort
+	 * @param left The start index
+	 * @param right The end index
+	 * @return The sorted array
 	 */
 	public static int[] quickSort(int[] array,int left, int right) {
 		if(left < right) {
@@ -21,6 +30,16 @@ public class Sort {
 		return array;
 	}
 	
+	/**
+	 * Randomized QuickSort algorithm is done by splitting the array 
+	 * and sorting values in place.
+	 * The partition index is randomly chosen with Random nextInt()
+	 * Big-Oh(n log(n) )
+	 * @param array The data to sort
+	 * @param left The start index
+	 * @param right The end index
+	 * @return The sorted array
+	 */
 	public static int[] rQuickSort(int[] array,int left, int right) {
 		Random rand = new Random();
 		
@@ -46,14 +65,24 @@ public class Sort {
 		return array;
 	}
 	
+	/**
+	 * Partition is used to pseudo sort the data in the given range.  A pivot is chosen
+	 * and the array is sorted so that values to the left of the pivot value are less than
+	 * the pivot and values to the right of the pivot are greater than the pivot value.
+	 * @param array The data to sort
+	 * @param left The start index
+	 * @param right The end index
+	 * @return The index of the pivot
+	 */
 	public static int partition(int[] array, int left, int right) {
-		//int begin = left;
 		int i = left;
 		int j = right;
 		int pivot = array[left];
-//		System.out.println("L- " + i + " R- " + j);
-//		System.out.println(pivot);
 		
+		/* Swap values until every left of the pivot are less than the pivot
+		 * and values to the right of the pivot are greater than or equal to
+		 * pivot
+		 */
 		do {
 			//Iterate as long as the values are >
 			//than the pivot value
@@ -72,26 +101,35 @@ public class Sort {
 			if(i < j)
 				swap(array, i, j);
 			
-//			System.out.println("2L- " + i + " R- " + j);
-//			printArray(array);
-			
 		} while(i < j);
-//		System.out.println("3L- " + i + " R- " + j);
 		
+		//place the pivot in between the two sorted ranges
 		array[left] = array[j];
 		array[j] = pivot;
 
-//		printArray(array);
-		
 		return j;
 	}
 	
+	/**
+	 * Swap two elements in an array
+	 * @param array The array of data
+	 * @param left The first index
+	 * @param right The second index
+	 */
 	public static void swap(int[] array, int left, int right) {
 		int temp = array[left];
 		array[left] = array[right];
 		array[right] = temp;
 	}
 	
+	/**
+	 * The merge sort algorithm is done by splitting the array until
+	 * ranges of length 1 are returned.  These arrays are then merged
+	 * recursively until the entire array has been merged back, sorted.
+	 * @param array  The array of data
+	 * @param low The left index range
+	 * @param high The right index range
+	 */
 	public static void mergeSort(int[] array, int low, int high){
 		if(low < high){
 			int middle = (low + high) / 2;
@@ -101,6 +139,14 @@ public class Sort {
 		}	
 	}
 	
+	/**
+	 * Merge combines the two ranges of the sorted array and then copies it back
+	 * to the original array.
+	 * @param array  The array with two sorted ranges
+	 * @param low The low index range
+	 * @param mid The middle index range
+	 * @param high The high index range
+	 */
 	public static void merge(int[] array, int low, int mid, int high) {
 		int b[] = new int[array.length];
 		int h = low;
@@ -141,6 +187,7 @@ public class Sort {
 		
 	}
 	
+	//Second merge sort that does perform in n log(n) time
 //	// Places the elements of the given array into sorted order
 //    // using the merge sort algorithm.
 //    // post: array is in sorted (nondecreasing) order
@@ -201,6 +248,10 @@ public class Sort {
 //        }
 //    }
 	
+	/**
+	 * Selection sort chooses the next smallest element and places in index i
+	 * @param array The array to sort
+	 */
 	public static void selection(int[] array) {
 		int smallest = 0;
 		
@@ -222,6 +273,11 @@ public class Sort {
 		}
 	}
 	
+	/**
+	 * Insertion sort starts at index 1 and shifts the values until the index is found
+	 * to place the new value in a sorted order.
+	 * @param array  The array to sort
+	 */
 	public static void insertion(int[] array) {
 		
 		for(int i = 1; i < array.length; i++) {
@@ -239,6 +295,10 @@ public class Sort {
 		
 	}
 	
+	/**
+	 * Print the values in the array
+	 * @param arr The array of data
+	 */
 	public static void printArray(int[] arr) {
 		for(int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");

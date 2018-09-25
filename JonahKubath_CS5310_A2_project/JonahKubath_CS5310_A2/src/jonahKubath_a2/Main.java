@@ -43,8 +43,6 @@ public class Main {
 				 */
 				int temp[] = new int[j];
 				
-				System.nanoTime();
-				
 				/* Quicksort */
 				temp = copyArray(data, temp);
 				if(firstRun && temp.length == printLength) {
@@ -87,7 +85,7 @@ public class Main {
 					verifyArray(sorted, temp, "rQuicksort");
 				}
 				
-				/* rQuickSort */
+				/* MergeSort */
 				temp = copyArray(data, temp);
 				if(firstRun && temp.length == printLength) {
 					System.out.println("Mergesort");
@@ -97,33 +95,13 @@ public class Main {
 				start = end = 0; // Set time back to 0
 				start = System.nanoTime();
 				Sort.mergeSort(temp, 0, temp.length - 1);
+				//Sort.mergeSort(temp);
 				end = System.nanoTime();
 				time[2] += (end - start);
 				if(firstRun && temp.length == printLength) {
 					System.out.print("New - ");
 					printArray(temp);
 				}
-				
-				if(verify) {
-					verifyArray(sorted, temp, "rQuicksort");
-				}
-				
-//				/* Mergesort */
-//				temp = copyArray(data, temp);
-//				if(firstRun && temp.length == printLength) {
-//					System.out.println("Mergesort");
-//					System.out.print("Old - ");
-//					printArray(temp);
-//				}
-//				start = end = 0; // Set time back to 0
-//				start = System.nanoTime();
-//				Sort.mergeSort(temp, 0, temp.length - 1);
-//				end = System.nanoTime();
-//				time[2] += (end - start);
-//				if(firstRun && temp.length == printLength) {
-//					System.out.print("New - ");
-//					printArray(temp);
-//				}
 				
 				if(verify) {
 					verifyArray(sorted, temp, "Mergesort");
@@ -162,6 +140,12 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * Copies the values from old to copy array
+	 * @param old The src array
+	 * @param copy The destination array
+	 * @return A pointer to the new array
+	 */
 	public static int[] copyArray(int[] old, int[] copy) {
 		//Error
 		if(old.length != copy.length)
@@ -174,6 +158,10 @@ public class Main {
 		return copy;
 	}
 	
+	/**
+	 * Prints the values held in arr
+	 * @param arr The src array
+	 */
 	public static void printArray(int[] arr) {
 		for(int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
@@ -181,6 +169,11 @@ public class Main {
 		System.out.println("");
 	}
 	
+	/**
+	 * Prints the average run times of the sorting algorithms
+	 * @param times Array holding the total time of each algorithm
+	 * @param runs The number of runs
+	 */
 	public static void printAverageTime(long[] times, int runs) {
 		System.out.println("Quicksort - " + (times[0] / runs / 1000) + " ms");
 		System.out.println("rQuickSort - " + (times[1] / runs / 1000) + " ms");
@@ -189,6 +182,12 @@ public class Main {
 		System.out.println();
 	}
 	
+	/**
+	 * Compares the contents of two arrays for equality
+	 * @param sorted The algorithm generated array
+	 * @param test The array sorted by a known good algorithm
+	 * @param name Name of the sorting algorithm used
+	 */
 	public static void verifyArray(int sorted[], int test[], String name) {
 		boolean equal = true;
 		
