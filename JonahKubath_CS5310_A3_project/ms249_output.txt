@@ -1,0 +1,111 @@
+Building Huffman tree
+Nodes - 26
+A - 1011
+	Frequency - 0.073
+	Depth     - 4
+	Weighted codeword length - 0.29
+B - 000100
+	Frequency - 0.009
+	Depth     - 6
+	Weighted codeword length - 0.05
+C - 01110
+	Frequency - 0.03
+	Depth     - 5
+	Weighted codeword length - 0.15
+D - 0000
+	Frequency - 0.044
+	Depth     - 4
+	Weighted codeword length - 0.18
+E - 100
+	Frequency - 0.13
+	Depth     - 3
+	Weighted codeword length - 0.39
+F - 01010
+	Frequency - 0.028
+	Depth     - 5
+	Weighted codeword length - 0.14
+G - 011110
+	Frequency - 0.016
+	Depth     - 6
+	Weighted codeword length - 0.10
+H - 10100
+	Frequency - 0.035
+	Depth     - 5
+	Weighted codeword length - 0.18
+I - 1100
+	Frequency - 0.074
+	Depth     - 4
+	Weighted codeword length - 0.30
+J - 010110101
+	Frequency - 0.002
+	Depth     - 9
+	Weighted codeword length - 0.02
+K - 01011000
+	Frequency - 0.003
+	Depth     - 8
+	Weighted codeword length - 0.02
+L - 10101
+	Frequency - 0.035
+	Depth     - 5
+	Weighted codeword length - 0.18
+M - 00011
+	Frequency - 0.025
+	Depth     - 5
+	Weighted codeword length - 0.13
+N - 1111
+	Frequency - 0.078
+	Depth     - 4
+	Weighted codeword length - 0.31
+O - 1101
+	Frequency - 0.074
+	Depth     - 4
+	Weighted codeword length - 0.30
+P - 01000
+	Frequency - 0.027
+	Depth     - 5
+	Weighted codeword length - 0.14
+Q - 01011001
+	Frequency - 0.003
+	Depth     - 8
+	Weighted codeword length - 0.02
+R - 1110
+	Frequency - 0.077
+	Depth     - 4
+	Weighted codeword length - 0.31
+S - 0110
+	Frequency - 0.063
+	Depth     - 4
+	Weighted codeword length - 0.25
+T - 001
+	Frequency - 0.093
+	Depth     - 3
+	Weighted codeword length - 0.28
+U - 01001
+	Frequency - 0.027
+	Depth     - 5
+	Weighted codeword length - 0.14
+V - 000101
+	Frequency - 0.013
+	Depth     - 6
+	Weighted codeword length - 0.08
+W - 010111
+	Frequency - 0.016
+	Depth     - 6
+	Weighted codeword length - 0.10
+X - 01011011
+	Frequency - 0.005
+	Depth     - 8
+	Weighted codeword length - 0.04
+Y - 011111
+	Frequency - 0.019
+	Depth     - 6
+	Weighted codeword length - 0.11
+Z - 010110100
+	Frequency - 0.001
+	Depth     - 9
+	Weighted codeword length - 0.01
+
+Summary
+	Weighted external path   - 4.19
+	Build heap - 13.96 ms
+	Build tree - 43 ms

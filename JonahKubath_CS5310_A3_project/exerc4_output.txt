@@ -1,0 +1,35 @@
+Building Huffman tree
+Nodes - 7
+M1 - 1000
+	Frequency - 4.0
+	Depth     - 4
+	Weighted codeword length - 16.00
+M2 - 1001
+	Frequency - 5.0
+	Depth     - 4
+	Weighted codeword length - 20.00
+M3 - 010
+	Frequency - 7.0
+	Depth     - 3
+	Weighted codeword length - 21.00
+M4 - 011
+	Frequency - 8.0
+	Depth     - 3
+	Weighted codeword length - 24.00
+M5 - 101
+	Frequency - 10.0
+	Depth     - 3
+	Weighted codeword length - 30.00
+M6 - 00
+	Frequency - 12.0
+	Depth     - 2
+	Weighted codeword length - 24.00
+M7 - 11
+	Frequency - 20.0
+	Depth     - 2
+	Weighted codeword length - 40.00
+
+Summary
+	Weighted external path   - 175.00
+	Build heap - 5.54 ms
+	Build tree - 20 ms

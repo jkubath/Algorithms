@@ -11,11 +11,11 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		System.out.println("Generating Data");
 		int numFiles = 10;
-		int increment = 10;
+		int increment = 1000;
 		Random rand = new Random();
 		
 		for(int i = 0; i < numFiles; i++) {
-			File f = new File("./data/data_" + i + ".txt");
+			File f = new File("./data/data3/data_" + i + ".txt");
 			FileWriter fw = new FileWriter(f);
 			BufferedWriter writer = new BufferedWriter(fw);
 			
