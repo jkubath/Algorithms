@@ -1,0 +1,39 @@
+File - ./data_10_100/data_0.txt
+MinCost = 169.0
+Average Time - 57 ms
+
+File - ./data_10_100/data_1.txt
+MinCost = 290.0
+Average Time - 128 ms
+
+File - ./data_10_100/data_2.txt
+MinCost = 302.0
+Average Time - 182 ms
+
+File - ./data_10_100/data_3.txt
+MinCost = 224.0
+Average Time - 258 ms
+
+File - ./data_10_100/data_4.txt
+MinCost = 281.0
+Average Time - 299 ms
+
+File - ./data_10_100/data_5.txt
+MinCost = 279.0
+Average Time - 377 ms
+
+File - ./data_10_100/data_6.txt
+MinCost = 254.0
+Average Time - 415 ms
+
+File - ./data_10_100/data_7.txt
+MinCost = 262.0
+Average Time - 385 ms
+
+File - ./data_10_100/data_8.txt
+MinCost = 300.0
+Average Time - 661 ms
+
+File - ./data_10_100/data_9.txt
+MinCost = 292.0
+Average Time - 539 ms
