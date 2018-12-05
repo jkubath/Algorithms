@@ -15,7 +15,7 @@ public class Main {
 	static boolean printArray = false;
 
 	public static void main(String[] args) {
-		int n = 8;
+		int n = 9;
 		int numberOfRuns = 5;
 		
 		if(args.length > 0) {
@@ -169,7 +169,7 @@ public class Main {
 		
 		int max = n;
 		if(k == 0) {
-			max = (int) Math.ceil(n / 2);
+			max = (int) Math.ceil(n / 2.0);
  		}
 		//System.out.println("Place: " + k);
 		for(int i = 0; i < max; i++) {
